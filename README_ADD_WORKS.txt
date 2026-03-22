@@ -47,3 +47,8 @@ MUSIC
 
 EMAIL
 listopad.gallery@yahoo.com
+
+
+LATEST UPDATE
+- Added 3 real painting photos converted to JPG with safe filenames.
+- If a question-mark image ever appears, check that the filename in works.json exactly matches the file in /images/.

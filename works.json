@@ -1,6 +1,51 @@
 {
   "works": [
     {
+      "id": "pink-landscape",
+      "title": "Pink Landscape",
+      "year": "undated",
+      "medium": "Oil on canvas",
+      "dimensions": "Dimensions on request",
+      "signature": "Signed A.L.",
+      "tier": "high",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/work-pink-landscape.jpg",
+      "alt": "Pink Landscape by Alexey Listopad",
+      "description": "A luminous landscape structured by a solitary figure, flowering light, and a restrained field of pink and violet atmosphere.",
+      "sortOrder": 1
+    },
+    {
+      "id": "grey-sea",
+      "title": "Grey Sea",
+      "year": "undated",
+      "medium": "Oil on canvas",
+      "dimensions": "Dimensions on request",
+      "signature": "Unsigned / signature not visible in provided image",
+      "tier": "high",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/work-grey-sea.jpg",
+      "alt": "Grey Sea by Alexey Listopad",
+      "description": "A quiet marine composition where horizon, weather, and human presence dissolve into a muted silver-grey register.",
+      "sortOrder": 2
+    },
+    {
+      "id": "harbor-pastel",
+      "title": "Harbor Pastel",
+      "year": "undated",
+      "medium": "Oil on canvas",
+      "dimensions": "Dimensions on request",
+      "signature": "Signed A.L.",
+      "tier": "mid",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/work-harbor-pastel.jpg",
+      "alt": "Harbor Pastel by Alexey Listopad",
+      "description": "A harbor scene rendered in softened pink and green tonalities, balancing still water, modest architecture, and suspended light.",
+      "sortOrder": 3
+    },
+    {
       "id": "harbor-mist",
       "title": "Harbor Mist",
       "year": "circa 1990s",
@@ -13,7 +58,7 @@
       "image": "images/harbor-mist.jpg",
       "alt": "Harbor Mist by Alexey Listopad",
       "description": "A restrained coastal composition shaped by diffuse light, stillness, and tonal depth.",
-      "sortOrder": 1
+      "sortOrder": 4
     },
     {
       "id": "silent-shore",
@@ -28,7 +73,7 @@
       "image": "images/silent-shore.jpg",
       "alt": "Silent Shore by Alexey Listopad",
       "description": "An atmospheric shoreline work where form recedes into muted structure and Baltic light.",
-      "sortOrder": 2
+      "sortOrder": 5
     },
     {
       "id": "spring-labor",
@@ -43,7 +88,7 @@
       "image": "images/spring-labor.jpg",
       "alt": "Spring Labor by Alexey Listopad",
       "description": "A more structured figurative work, balancing movement, labor, and painterly economy.",
-      "sortOrder": 3
+      "sortOrder": 6
     },
     {
       "id": "spring-field",
@@ -58,7 +103,7 @@
       "image": "images/spring-field.jpg",
       "alt": "Spring Field by Alexey Listopad",
       "description": "A compact landscape with approachable scale and immediate decorative and collector appeal.",
-      "sortOrder": 4
+      "sortOrder": 7
     },
     {
       "id": "night-estuary",
@@ -73,7 +118,7 @@
       "image": "images/night-estuary.jpg",
       "alt": "Night Estuary by Alexey Listopad",
       "description": "Dark water, suspended horizon, and a low-burning luminosity give the work its quiet gravity.",
-      "sortOrder": 5
+      "sortOrder": 8
     },
     {
       "id": "red-house",
@@ -88,7 +133,7 @@
       "image": "images/red-house.jpg",
       "alt": "Red House by Alexey Listopad",
       "description": "A modest architectural motif rendered with tonal restraint and a strong sense of memory.",
-      "sortOrder": 6
+      "sortOrder": 9
     }
   ]
 }
