@@ -1,228 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alexey Listopad — Estate</title>
-  <meta name="description" content="Estate website for the paintings of Alexey Listopad.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexey Listopad Estate</title>
+  <meta name="description" content="Private estate collection of Alexey Listopad. Selected works released for acquisition.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-shell header-inner">
-      <a class="brand" href="#top"><strong>ALEXEY LISTOPAD</strong><span>Estate</span></a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#works">Selected Works</a>
-        <a href="#about">About</a>
-        <a href="#exhibitions">Exhibitions</a>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">Alexey Listopad — Estate</div>
+      <nav class="nav">
+        <a href="gallery.html">Selected Works</a>
         <a href="#estate">Estate</a>
+        <a href="#collections">Collections</a>
         <a href="#acquire">Acquire</a>
       </nav>
-      <div class="header-side">
-        <div class="lang-switch" aria-label="Language selector">
-          <a href="index.html" class="active">EN</a>
-          <a href="fr.html" class="">FR</a>
-          <a href="es.html" class="">ES</a>
-          <a href="de.html" class="">DE</a>
-        </div>
-        <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-mark">⟡ 1 2</span><span class="sound-state">Off</span></button>
-        <button class="menu-button" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
-      </div>
-    </div>
-    <div class="site-shell mobile-panel">
-      <nav aria-label="Mobile">
-        <a href="#top">Home</a>
-        <a href="#works">Selected Works</a>
-        <a href="#about">About</a>
-        <a href="#exhibitions">Exhibitions</a>
-        <a href="#estate">Estate</a>
-        <a href="#acquire">Acquire</a>
-      </nav>
-      <div class="lang-switch" aria-label="Language selector mobile">
-        <a href="index.html" class="active">EN</a>
-        <a href="fr.html" class="">FR</a>
-        <a href="es.html" class="">ES</a>
-        <a href="de.html" class="">DE</a>
-      </div>
-      <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-mark">⟡ 1 2</span><span class="sound-state">Off</span></button>
-    </div>
-  </header>
+    </header>
 
-  <main id="top" class="site-shell">
     <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">Estate of the painter</div>
-          <h1>Alexey<span>Listopad</span></h1>
-          <p class="hero-lead">A body of work formed in the northern light of the Baltic coast — paintings shaped by discipline, atmosphere, and an enduring attention to silence.</p>
-          <p class="hero-note">Following the artist’s recent passing, the estate presents a first curated selection from the archive. The works are released gradually through private placement and collector inquiry.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#works">View selected works</a>
-            <a class="btn" href="#acquire">Private inquiry</a>
-          </div>
+      <div>
+        <div class="eyebrow">Private Estate Collection</div>
+        <h1>Alexey<br>Listopad</h1>
+        <p>This website represents the private estate collection of the artist. A limited selection of works is released for acquisition through private inquiry.</p>
+        <p class="subtle">Available works from the estate. Prices available upon request. Works are held in private collections across Europe.</p>
+        <div class="ctas">
+          <a class="text-cta" href="gallery.html">View Selected Works</a>
+          <a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Request%20Catalogue">Request Catalogue</a>
+          <a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Private%20Viewing">Private Viewing</a>
         </div>
-        <figure class="hero-figure">
-          <img src="harbor_mist.jpg" alt="Alexey Listopad painting">
-          <figcaption class="caption">Oil on canvas. Signed A.L. A restrained estate presentation for collectors, advisors, and institutions.</figcaption>
-        </figure>
+      </div>
+      <div class="hero-card">
+        <img src="images/harbor_mist.jpg" alt="Harbor Mist by Alexey Listopad">
+        <div class="caption">
+          <span>Harbor Mist</span>
+          <span>Oil on canvas · signed A.L.</span>
+        </div>
       </div>
     </section>
 
-    <section id="works" class="section">
+    <section class="section" id="estate">
       <div class="section-head">
-        <div class="section-label">Selected Works</div>
-        <div class="section-intro">
-          <h2>A gallery-style structure for the first release</h2>
-          <p>A first public selection from the estate. Each work is presented with a disciplined card structure: image, title, medium, dimensions, status, and inquiry pathway — clear enough for collectors, quiet enough for a gallery setting.</p>
+        <div class="section-title">Estate Framing</div>
+        <div class="section-intro">The archive comprises approximately 300 paintings. Not all works are published publicly; the estate follows a controlled release model intended to preserve value and curatorial coherence.</div>
+      </div>
+      <div class="columns">
+        <div class="copy">
+          <p>The site is designed not as a marketplace, but as a collector-facing presentation layer. A concise public selection introduces the work; a broader inventory remains available by request.</p>
+          <p>This structure makes future growth simple: new images can be uploaded to GitHub, then linked through a single data file. The gallery pages and individual artwork pages update automatically from that record.</p>
+        </div>
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px;color:var(--text)">What changes value perception</div>
+          <div class="meta">
+            Limited selection released for acquisition<br>
+            Prices available upon request<br>
+            Works held in private collections across Europe<br>
+            Additional works available by private inquiry
+          </div>
         </div>
       </div>
-      <div class="works-grid">
-        
-        <article class="work-card">
-          <div class="work-image-wrap">
-            <img class="work-image" src="spring_labor.jpg" alt="Spring Labor">
-          </div>
-          <div class="work-meta-top"><span>Oil on canvas</span><span>c. 1988</span><span>Signed A.L.</span></div>
-          <h3>Spring Labor</h3>
-          <p class="work-description">A lyrical figurative landscape in which the human figure is absorbed by weather, light, and spring ground. The painting speaks less through narrative than through a sense of renewal and suspended stillness.</p>
-          <dl class="dl">
-            <dt>Medium</dt><dd>Oil on canvas</dd>
-            <dt>Dimensions</dt><dd>Approx. 70 × 70 cm</dd>
-            <dt>Status</dt><dd>Available by inquiry</dd>
-          </dl>
-          <div class="work-actions">
-            <a class="btn" href="#acquire">Request details</a>
-          </div>
-        </article>
-    
-        
-        <article class="work-card">
-          <div class="work-image-wrap">
-            <img class="work-image" src="harbor_mist.jpg" alt="Harbor at Daybreak">
-          </div>
-          <div class="work-meta-top"><span>Oil on canvas</span><span>c. 1991</span><span>Signed A.L.</span></div>
-          <h3>Harbor at Daybreak</h3>
-          <p class="work-description">An atmospheric maritime composition characteristic of Listopad’s Baltic vocabulary. Harbor architecture and small boats appear as memory-forms dissolved into luminous air.</p>
-          <dl class="dl">
-            <dt>Medium</dt><dd>Oil on canvas</dd>
-            <dt>Dimensions</dt><dd>Approx. 80 × 60 cm</dd>
-            <dt>Status</dt><dd>Available by inquiry</dd>
-          </dl>
-          <div class="work-actions">
-            <a class="btn" href="#acquire">Request details</a>
-          </div>
-        </article>
-    
-        
-        <article class="work-card">
-          <div class="work-image-wrap">
-            <img class="work-image" src="silent_shore.jpg" alt="Silent Shore">
-          </div>
-          <div class="work-meta-top"><span>Oil on canvas</span><span>c. 1994</span><span>Signed A.L.</span></div>
-          <h3>Silent Shore</h3>
-          <p class="work-description">A contemplative seascape with figures reduced to presence rather than anecdote. Tonal restraint and muted silver-violet light give the work a meditative gravity.</p>
-          <dl class="dl">
-            <dt>Medium</dt><dd>Oil on canvas</dd>
-            <dt>Dimensions</dt><dd>Approx. 90 × 70 cm</dd>
-            <dt>Status</dt><dd>Available by inquiry</dd>
-          </dl>
-          <div class="work-actions">
-            <a class="btn" href="#acquire">Request details</a>
-          </div>
-        </article>
-    
-      </div>
-      <a class="minor-link" href="#acquire">Additional works from the estate available on request.</a>
     </section>
 
-    <section id="about" class="section">
+    <section class="section" id="collections">
       <div class="section-head">
-        <div class="section-label">About</div>
-        <div class="section-intro"><h2>A painter between discipline, atmosphere, and memory</h2></div>
+        <div class="section-title">Collections</div>
+        <div class="section-intro">Works are held in private collections across Europe. Selected works from the estate are now being positioned for acquisition within a restrained, gallery-level framework.</div>
       </div>
-      <div class="two-col">
-        <div class="copy-block">
-          <p>Alexey Listopad (1950–2024) developed a painterly language shaped by Baltic light, academic structure, and a quiet scenographic intelligence. Born in the north and formed in Klaipėda, he carried into maturity a visual sensitivity to shoreline weather, industrial edges, and tonal restraint.</p>
-          <p>Alongside painting, he worked within cinematic and scenographic environments. That experience informed the spatial intelligence of the later canvases: composed rather than accidental, luminous rather than decorative, inward rather than descriptive.</p>
-        </div>
-        <aside class="quote-card">
-          <blockquote>The paintings do not insist; they unfold gradually. Their atmosphere is held in suspension, as though memory itself were still settling into light.</blockquote>
-          <p class="quote-source">Estate statement</p>
-        </aside>
+      <div class="ctas">
+        <a class="text-cta" href="gallery.html">Browse Works</a>
+        <a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Request%20details">Request Details</a>
       </div>
     </section>
 
-    <section id="exhibitions" class="section">
+    <section class="section" id="acquire">
       <div class="section-head">
-        <div class="section-label">Exhibitions</div>
-        <div class="section-intro">
-          <h2>Institutional framing matters</h2>
-          <p>A premium estate site should not feel like a marketplace. The exhibition section anchors the work in public context and supports collector confidence with a museum-facing tone.</p>
+        <div class="section-title">Acquire</div>
+        <div class="section-intro">Works are offered through private inquiry. The estate works directly with collectors, advisors, and institutions.</div>
+      </div>
+      <div class="columns">
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px;color:var(--text)">Request Catalogue</div>
+          <div class="meta">A broader estate selection may be shared privately, including additional images, availability, and internal categorisation.</div>
+          <div class="ctas"><a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Request%20Catalogue">Request Catalogue</a></div>
         </div>
-      </div>
-      <div class="info-card">
-        <dl class="info-list">
-          <dt>Museum context</dt><dd>Retrospective exhibition at the Museum of Dolgoprudny.</dd>
-          <dt>Collection model</dt><dd>Controlled release from a private estate archive.</dd>
-          <dt>Medium</dt><dd>Oil on canvas; signed A.L.</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="estate" class="section">
-      <div class="section-head">
-        <div class="section-label">Estate</div>
-        <div class="section-intro"><h2>A controlled archive, not an open inventory</h2></div>
-      </div>
-      <div class="two-col">
-        <div class="copy-block">
-          <p>The estate was established to preserve, document, and gradually present the work following the artist’s passing. The archive consists of approximately 300 paintings spanning several decades of practice.</p>
-          <p>Selected works are presented publicly. A broader group remains available upon request for collectors, advisors, and institutions. This preserves hierarchy, avoids oversupply, and supports a collector-grade market position.</p>
-        </div>
-        <div class="info-card">
-          <img src="spring_field.jpg" alt="Estate archive painting view" style="border-radius:18px; aspect-ratio:4/4.5; object-fit:cover; width:100%; margin-bottom:14px;">
-          <p>The visual rhythm remains quiet, but the sales structure becomes more disciplined: curated release, private inquiry, controlled inventory.</p>
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px;color:var(--text)">Private Inquiry</div>
+          <div class="meta">For acquisition terms, shipping, condition, or private viewing, contact the estate directly.</div>
+          <div class="ctas"><a class="text-cta" href="mailto:listopad.gallery@yahoo.com">listopad.gallery@yahoo.com</a></div>
         </div>
       </div>
     </section>
 
-    <section id="acquire" class="section">
-      <div class="section-head">
-        <div class="section-label">Acquire</div>
-        <div class="section-intro">
-          <h2>Private acquisition only</h2>
-          <p>Works are offered through direct inquiry. Information regarding availability, pricing, condition, provenance notes, and shipping within Europe is provided individually.</p>
-        </div>
-      </div>
-      <div class="acquire-grid">
-        <div class="acquire-card">
-          <strong>Contact</strong>
-          <a class="email-link" href="mailto:estate@listopad.gallery">estate@listopad.gallery</a>
-          <p>Replace this email if you want another contact before uploading to GitHub.</p>
-        </div>
-        <div class="info-card">
-          <dl class="info-list">
-            <dt>Format</dt><dd>Private inquiry</dd>
-            <dt>Shipping</dt><dd>Europe on request</dd>
-            <dt>Documents</dt><dd>Condition notes and additional images available</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="site-shell footer-inner">
-      <div>Private Estate Collection</div>
-      <div class="footer-links">
-        <a href="#works">Selected Works</a>
-        <a href="#estate">Estate</a>
-        <a href="#acquire">Acquire</a>
-      </div>
-    </div>
-  </footer>
-
+    <footer class="footer">
+      <div>Alexey Listopad Estate</div>
+      <div>Private inquiry: <a href="mailto:listopad.gallery@yahoo.com">listopad.gallery@yahoo.com</a></div>
+      <div>© <span data-year></span></div>
+    </footer>
+  </div>
   <script src="site.js"></script>
 </body>
 </html>

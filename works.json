@@ -1,0 +1,64 @@
+{
+  "works": [
+    {
+      "id": "harbor-mist",
+      "title": "Harbor Mist",
+      "year": "circa 1990s",
+      "medium": "Oil on canvas",
+      "dimensions": "80 × 60 cm",
+      "signature": "Signed A.L.",
+      "tier": "high",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/harbor_mist.jpg",
+      "alt": "Harbor Mist by Alexey Listopad",
+      "description": "A restrained coastal composition shaped by diffuse light, stillness, and tonal depth.",
+      "sortOrder": 1
+    },
+    {
+      "id": "silent-shore",
+      "title": "Silent Shore",
+      "year": "circa 1990s",
+      "medium": "Oil on canvas",
+      "dimensions": "90 × 70 cm",
+      "signature": "Signed A.L.",
+      "tier": "high",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/silent_shore.jpg",
+      "alt": "Silent Shore by Alexey Listopad",
+      "description": "An atmospheric shoreline work where form recedes into muted structure and Baltic light.",
+      "sortOrder": 2
+    },
+    {
+      "id": "spring-labor",
+      "title": "Spring Labor",
+      "year": "circa 1980s",
+      "medium": "Oil on canvas",
+      "dimensions": "100 × 80 cm",
+      "signature": "Signed A.L.",
+      "tier": "mid",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/spring_labor.jpg",
+      "alt": "Spring Labor by Alexey Listopad",
+      "description": "A more structured figurative work, balancing movement, labor, and painterly economy.",
+      "sortOrder": 3
+    },
+    {
+      "id": "spring-field",
+      "title": "Spring Field",
+      "year": "circa 1980s",
+      "medium": "Oil on canvas",
+      "dimensions": "70 × 50 cm",
+      "signature": "Signed A.L.",
+      "tier": "fast",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/spring_field.jpg",
+      "alt": "Spring Field by Alexey Listopad",
+      "description": "A compact landscape with approachable scale and immediate decorative and collector appeal.",
+      "sortOrder": 4
+    }
+  ]
+}

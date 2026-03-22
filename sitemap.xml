@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://listopad.gallery/</loc></url>
-  <url><loc>https://listopad.gallery/fr.html</loc></url>
-  <url><loc>https://listopad.gallery/es.html</loc></url>
-  <url><loc>https://listopad.gallery/de.html</loc></url>
+  <url><loc>https://listopad.gallery/gallery.html</loc></url>
+  <url><loc>https://listopad.gallery/artwork.html</loc></url>
 </urlset>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Works — Alexey Listopad Estate</title>
+  <meta name="description" content="Selected works from the estate of Alexey Listopad.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><a href="index.html">Alexey Listopad — Estate</a></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="#catalog">Catalog</a>
+        <a href="mailto:listopad.gallery@yahoo.com?subject=Request%20Catalogue">Request Catalogue</a>
+      </nav>
+    </header>
+
+    <section class="detail">
+      <div class="section-head">
+        <div class="section-title">Selected Works</div>
+        <div class="section-intro">A data-driven catalog designed for gradual growth. Upload an optimized image, add one record to <span class="small">works.json</span>, and the site automatically creates the card and the artwork page.</div>
+      </div>
+
+      <div class="catalog-toolbar" id="catalog">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="high">High Value</button>
+          <button class="filter-btn" data-filter="mid">Mid Tier</button>
+          <button class="filter-btn" data-filter="fast">Fast Sale</button>
+        </div>
+        <div class="small">Prices available upon request</div>
+      </div>
+
+      <div class="grid" data-catalog-grid></div>
+    </section>
+
+    <footer class="footer">
+      <div>Alexey Listopad Estate</div>
+      <div>Catalog powered by works.json</div>
+      <div>© <span data-year></span></div>
+    </footer>
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>
