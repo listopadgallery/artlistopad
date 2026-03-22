@@ -1,228 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alexey Listopad — Estate</title>
-  <meta name="description" content="Estate website for the paintings of Alexey Listopad.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexey Listopad Estate</title>
+  <meta name="description" content="Alexey Listopad Estate — selected works from the private estate collection.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-shell header-inner">
-      <a class="brand" href="#top"><strong>ALEXEY LISTOPAD</strong><span>Estate</span></a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="#top">Inicio</a>
-        <a href="#works">Obras seleccionadas</a>
-        <a href="#about">Sobre el artista</a>
-        <a href="#exhibitions">Exposiciones</a>
-        <a href="#estate">Estate</a>
-        <a href="#acquire">Adquirir</a>
-      </nav>
-      <div class="header-side">
-        <div class="lang-switch" aria-label="Language selector">
-          <a href="index.html" class="">EN</a>
-          <a href="fr.html" class="">FR</a>
-          <a href="es.html" class="active">ES</a>
-          <a href="de.html" class="">DE</a>
-        </div>
-        <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-mark">⟡ 1 2</span><span class="sound-state">Off</span></button>
-        <button class="menu-button" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
-      </div>
+  <audio id="music1" preload="none" loop><source src="music1.wav" type="audio/wav"></audio>
+  <audio id="music2" preload="none" loop><source src="music2.wav" type="audio/wav"></audio>
+  <div class="shell">
+
+<header class="site-header">
+  <div class="brand">Alexey Listopad — Estate</div>
+  <nav class="nav">
+    <a href="gallery.html?lang=es">Obras seleccionadas</a>
+    <a href="#about">Sobre la obra</a>
+    <a href="#exhibitions">Exposiciones</a>
+    <a href="#estate">Estate</a>
+    <a href="#acquire">Adquirir</a>
+  </nav>
+  <div class="right-cluster">
+    <div class="sound">
+      <button onclick="toggleMusic()">⟡</button>
+      <button onclick="chooseTrack(1)">1</button>
+      <button onclick="chooseTrack(2)">2</button>
+      <span class="music-state note" data-music-state>Off</span>
     </div>
-    <div class="site-shell mobile-panel">
-      <nav aria-label="Mobile">
-        <a href="#top">Inicio</a>
-        <a href="#works">Obras seleccionadas</a>
-        <a href="#about">Sobre el artista</a>
-        <a href="#exhibitions">Exposiciones</a>
-        <a href="#estate">Estate</a>
-        <a href="#acquire">Adquirir</a>
-      </nav>
-      <div class="lang-switch" aria-label="Language selector mobile">
-        <a href="index.html" class="">EN</a>
-        <a href="fr.html" class="">FR</a>
-        <a href="es.html" class="active">ES</a>
-        <a href="de.html" class="">DE</a>
-      </div>
-      <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-mark">⟡ 1 2</span><span class="sound-state">Off</span></button>
+    <nav class="lang">
+      <a href="index.html">EN</a>
+      <a href="fr.html">FR</a>
+      <a href="es.html">ES</a>
+      <a href="de.html">DE</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Colección privada del estate</div>
+    <h1>Alexey<br>Listopad</h1>
+    <p>Este sitio representa la colección privada del estate del artista. Una selección limitada de obras se libera para adquisición mediante consulta privada.</p>
+    <p class="soft">Obras disponibles del estate. Precios bajo solicitud. Obras conservadas en colecciones privadas de Europa.</p>
+    <div class="cta-row">
+      <a class="text-cta" href="gallery.html?lang=es">Obras seleccionadas</a>
+      <a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Solicitar%20cat%C3%A1logo">Solicitar catálogo</a>
+      <a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Visita%20privada">Visita privada</a>
     </div>
-  </header>
-
-  <main id="top" class="site-shell">
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">Estate del pintor</div>
-          <h1>Alexey<span>Listopad</span></h1>
-          <p class="hero-lead">Un conjunto de obras formado en la luz septentrional de la costa báltica: pinturas modeladas por la disciplina, la atmósfera y una atención duradera al silencio.</p>
-          <p class="hero-note">Tras el reciente fallecimiento del artista, el estate presenta una primera selección curada del archivo. Las obras se liberan gradualmente mediante colocación privada y consulta de coleccionistas.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#works">Ver obras seleccionadas</a>
-            <a class="btn" href="#acquire">Consulta privada</a>
-          </div>
-        </div>
-        <figure class="hero-figure">
-          <img src="harbor_mist.jpg" alt="Alexey Listopad painting">
-          <figcaption class="caption">Óleo sobre lienzo. Firmado A.L. Una presentación sobria del estate para coleccionistas, asesores e instituciones.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="works" class="section">
-      <div class="section-head">
-        <div class="section-label">Obras seleccionadas</div>
-        <div class="section-intro">
-          <h2>Una estructura de ficha pensada como en galería</h2>
-          <p>Primera selección pública del estate. Cada obra se presenta con una estructura clara: imagen, título, técnica, dimensiones, estado y vía de consulta; suficiente para el coleccionista, suficientemente silenciosa para un entorno de galería.</p>
-        </div>
-      </div>
-      <div class="works-grid">
-        
-        <article class="work-card">
-          <div class="work-image-wrap">
-            <img class="work-image" src="spring_labor.jpg" alt="Labor de primavera">
-          </div>
-          <div class="work-meta-top"><span>Oil on canvas</span><span>c. 1988</span><span>Signed A.L.</span></div>
-          <h3>Labor de primavera</h3>
-          <p class="work-description">Un paisaje figurativo lírico en el que la figura humana queda absorbida por el clima, la luz y la tierra primaveral. La pintura habla menos por narración que por una sensación de renovación y quietud suspendida.</p>
-          <dl class="dl">
-            <dt>Medium</dt><dd>Oil on canvas</dd>
-            <dt>Dimensions</dt><dd>Aprox. 70 × 70 cm</dd>
-            <dt>Status</dt><dd>Disponible por consulta</dd>
-          </dl>
-          <div class="work-actions">
-            <a class="btn" href="#acquire">Solicitar detalles</a>
-          </div>
-        </article>
-    
-        
-        <article class="work-card">
-          <div class="work-image-wrap">
-            <img class="work-image" src="harbor_mist.jpg" alt="Puerto al amanecer">
-          </div>
-          <div class="work-meta-top"><span>Oil on canvas</span><span>c. 1991</span><span>Signed A.L.</span></div>
-          <h3>Puerto al amanecer</h3>
-          <p class="work-description">Una composición marítima atmosférica característica del vocabulario báltico de Listopad. La arquitectura portuaria y las pequeñas embarcaciones aparecen como formas de memoria disueltas en un aire luminoso.</p>
-          <dl class="dl">
-            <dt>Medium</dt><dd>Oil on canvas</dd>
-            <dt>Dimensions</dt><dd>Aprox. 80 × 60 cm</dd>
-            <dt>Status</dt><dd>Disponible por consulta</dd>
-          </dl>
-          <div class="work-actions">
-            <a class="btn" href="#acquire">Solicitar detalles</a>
-          </div>
-        </article>
-    
-        
-        <article class="work-card">
-          <div class="work-image-wrap">
-            <img class="work-image" src="silent_shore.jpg" alt="Orilla silenciosa">
-          </div>
-          <div class="work-meta-top"><span>Oil on canvas</span><span>c. 1994</span><span>Signed A.L.</span></div>
-          <h3>Orilla silenciosa</h3>
-          <p class="work-description">Un paisaje marino contemplativo en el que las figuras quedan reducidas a presencia más que a anécdota. La contención tonal y una luz plateada-violeta otorgan a la obra una gravedad meditativa.</p>
-          <dl class="dl">
-            <dt>Medium</dt><dd>Oil on canvas</dd>
-            <dt>Dimensions</dt><dd>Aprox. 90 × 70 cm</dd>
-            <dt>Status</dt><dd>Disponible por consulta</dd>
-          </dl>
-          <div class="work-actions">
-            <a class="btn" href="#acquire">Solicitar detalles</a>
-          </div>
-        </article>
-    
-      </div>
-      <a class="minor-link" href="#acquire">Hay obras adicionales del estate disponibles a petición.</a>
-    </section>
-
-    <section id="about" class="section">
-      <div class="section-head">
-        <div class="section-label">Sobre el artista</div>
-        <div class="section-intro"><h2>Un pintor entre disciplina, atmósfera y memoria</h2></div>
-      </div>
-      <div class="two-col">
-        <div class="copy-block">
-          <p>Alexey Listopad (1950–2024) desarrolló un lenguaje pictórico modelado por la luz báltica, la estructura académica y una silenciosa inteligencia escenográfica. Nacido en el norte y formado en Klaipėda, llevó a su madurez una sensibilidad por el clima costero, los bordes industriales y la contención tonal.</p>
-          <p>Junto a la pintura, trabajó en entornos cinematográficos y escenográficos. Esa experiencia informó la inteligencia espacial de los lienzos tardíos: compuestos más que accidentales, luminosos más que decorativos, interiores más que descriptivos.</p>
-        </div>
-        <aside class="quote-card">
-          <blockquote>Las pinturas no se imponen; se revelan lentamente. Su atmósfera queda suspendida, como si la propia memoria aún estuviera asentándose en la luz.</blockquote>
-          <p class="quote-source">Declaración del estate</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="exhibitions" class="section">
-      <div class="section-head">
-        <div class="section-label">Exposiciones</div>
-        <div class="section-intro">
-          <h2>El marco institucional importa</h2>
-          <p>Un sitio premium de estate no debe parecer un marketplace. La sección de exposiciones ancla la obra en un contexto público y refuerza la confianza del coleccionista con un tono museístico.</p>
-        </div>
-      </div>
-      <div class="info-card">
-        <dl class="info-list">
-          <dt>Contexto museístico</dt><dd>Exposición retrospectiva en el Museo de Dolgoprudny.</dd>
-          <dt>Modelo de colocación</dt><dd>Liberación controlada desde un archivo privado del estate.</dd>
-          <dt>Técnica</dt><dd>Óleo sobre lienzo; firmado A.L.</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="estate" class="section">
-      <div class="section-head">
-        <div class="section-label">Estate</div>
-        <div class="section-intro"><h2>Un archivo controlado, no un inventario abierto</h2></div>
-      </div>
-      <div class="two-col">
-        <div class="copy-block">
-          <p>El estate fue establecido para preservar, documentar y presentar gradualmente la obra tras el fallecimiento del artista. El archivo reúne aproximadamente 300 pinturas que abarcan varias décadas de práctica.</p>
-          <p>Una selección aparece públicamente. Un grupo más amplio permanece disponible a petición para coleccionistas, asesores e instituciones. Esto preserva jerarquía, evita la sobreoferta y sostiene un posicionamiento de nivel coleccionista.</p>
-        </div>
-        <div class="info-card">
-          <img src="spring_field.jpg" alt="Estate archive painting view" style="border-radius:18px; aspect-ratio:4/4.5; object-fit:cover; width:100%; margin-bottom:14px;">
-          <p>The visual rhythm remains quiet, but the sales structure becomes more disciplined: curated release, private inquiry, controlled inventory.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="acquire" class="section">
-      <div class="section-head">
-        <div class="section-label">Adquirir</div>
-        <div class="section-intro">
-          <h2>Adquisición solo por consulta privada</h2>
-          <p>Las obras se ofrecen mediante contacto directo. La información sobre disponibilidad, precio, estado, procedencia y envío en Europa se proporciona de forma individual.</p>
-        </div>
-      </div>
-      <div class="acquire-grid">
-        <div class="acquire-card">
-          <strong>Contacto</strong>
-          <a class="email-link" href="mailto:estate@listopad.gallery">estate@listopad.gallery</a>
-          <p>Sustituye este email si prefieres otro contacto antes de subirlo a GitHub.</p>
-        </div>
-        <div class="info-card">
-          <dl class="info-list">
-            <dt>Format</dt><dd>Private inquiry</dd>
-            <dt>Shipping</dt><dd>Europe on request</dd>
-            <dt>Documents</dt><dd>Condition notes and additional images available</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="site-shell footer-inner">
-      <div>Colección privada — Estate</div>
-      <div class="footer-links">
-        <a href="#works">Obras seleccionadas</a>
-        <a href="#estate">Estate</a>
-        <a href="#acquire">Adquirir</a>
-      </div>
+    <div class="hero-statements">
+      <div class="panel"><div class="meta">Selección limitada liberada para adquisición.</div></div>
+      <div class="panel"><div class="meta">Precios bajo solicitud.</div></div>
+      <div class="panel"><div class="meta">Obras adicionales disponibles por consulta privada.</div></div>
     </div>
-  </footer>
+  </div>
+  <div class="hero-image">
+    <img src="images/harbor-mist.jpg" alt="Harbor Mist by Alexey Listopad">
+    <div class="caption"><span>Harbor Mist</span><span>Oil on canvas · signed A.L.</span></div>
+  </div>
+</section>
 
+<section class="section" id="about">
+  <div class="section-head">
+    <div class="section-title">Sobre la obra</div>
+    <div class="section-intro">Una pintura marcada por la luz báltica, la disciplina compositiva y una atención sostenida a la atmósfera.</div>
+  </div>
+  <div class="columns">
+    <div class="copy"><p>Alexey Listopad desarrolló un lenguaje visual en el que la estructura y la contención atmosférica permanecen unidas. La luz costera, la arquitectura silenciosa, el trabajo, el agua y el silencio forman el campo emocional recurrente de la obra.</p><p>En las pinturas maduras, la narración se retira y la percepción ocupa el centro. El resultado es un conjunto de calma, profundidad y gravedad interior poco comunes.</p></div>
+    <div class="panel">
+      <h3>Colecciones</h3>
+      <div class="meta">Obras conservadas en colecciones privadas de Europa. El estate presenta ahora un conjunto seleccionado del archivo mediante un modelo de liberación controlada.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="exhibitions">
+  <div class="section-head">
+    <div class="section-title">Exposiciones</div>
+    <div class="section-intro">La presencia institucional funciona aquí como una señal de seriedad y ubicación cultural, no como un simple adorno.</div>
+  </div>
+  <div class="panel">
+    <h3>Presencia institucional — “Mirages of the World”</h3>
+    <div class="meta">Museo de Dolgoprudny · exposición museística</div>
+    <div class="copy">La exposición en museo respalda la presentación póstuma del estate y refuerza la posición de la obra dentro de la tradición figurativa y expresiva tardía de la pintura postsoviética.</div>
+  </div>
+</section>
+
+<section class="section" id="estate">
+  <div class="section-head">
+    <div class="section-title">Estate</div>
+    <div class="section-intro">El archivo comprende aproximadamente 300 pinturas. No todas se muestran públicamente; el estate sigue una estrategia medida y selectiva.</div>
+  </div>
+  <div class="columns">
+    <div class="copy"><p>Este sitio actúa como una capa de presentación orientada a coleccionistas, no como un marketplace. Una selección concisa introduce la obra; un inventario más amplio permanece disponible bajo solicitud.</p><p>Esa estructura protege el valor, preserva la coherencia curatorial y permite lanzamientos futuros con mayor precisión.</p></div>
+    <div class="panel">
+      <h3>Notas del estate</h3>
+      <ul>
+        <li>Obras disponibles del estate.</li>
+        <li>Selección limitada liberada para adquisición.</li>
+        <li>Precios bajo solicitud.</li>
+        <li>Imágenes y documentación adicionales bajo solicitud.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="acquire">
+  <div class="section-head">
+    <div class="section-title">Adquirir</div>
+    <div class="section-intro">Las obras se ofrecen mediante consulta privada. El estate trabaja directamente con coleccionistas, asesores e instituciones.</div>
+  </div>
+  <div class="columns">
+    <div class="panel">
+      <h3>Solicitar catálogo</h3>
+      <div class="meta">Una selección más amplia puede compartirse en privado, con imágenes adicionales, disponibilidad y categorización interna.</div>
+      <div class="cta-row"><a class="text-cta" href="mailto:listopad.gallery@yahoo.com?subject=Solicitar%20cat%C3%A1logo">Solicitar catálogo</a></div>
+    </div>
+    <div class="panel">
+      <h3>Consulta privada</h3>
+      <div class="meta">Para condiciones de adquisición, envío, estado o visita privada, contacta directamente con el estate.</div>
+      <div class="cta-row"><a class="text-cta" href="mailto:listopad.gallery@yahoo.com">listopad.gallery@yahoo.com</a></div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+      <div>Alexey Listopad Estate</div>
+      <div>Private inquiry: <a href="mailto:listopad.gallery@yahoo.com">listopad.gallery@yahoo.com</a></div>
+      <div>© <span data-year></span></div>
+    </footer>
+  </div>
   <script src="site.js"></script>
 </body>
 </html>

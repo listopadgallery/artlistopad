@@ -8,14 +8,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
+  <audio id="music1" preload="none" loop><source src="music1.wav" type="audio/wav"></audio>
+  <audio id="music2" preload="none" loop><source src="music2.wav" type="audio/wav"></audio>
+  <div class="shell">
+    <header class="site-header">
       <div class="brand"><a href="index.html">Alexey Listopad — Estate</a></div>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Selected Works</a>
-        <a href="mailto:listopad.gallery@yahoo.com?subject=Request%20details">Request Details</a>
+        <a href="gallery.html?lang=en">Selected Works</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#acquire">Acquire</a>
       </nav>
+      <div class="right-cluster">
+        <div class="sound">
+          <button onclick="toggleMusic()">⟡</button>
+          <button onclick="chooseTrack(1)">1</button>
+          <button onclick="chooseTrack(2)">2</button>
+          <span class="music-state note" data-music-state>Off</span>
+        </div>
+        <nav class="lang">
+          <a href="artwork.html?lang=en">EN</a>
+          <a href="artwork.html?lang=fr">FR</a>
+          <a href="artwork.html?lang=es">ES</a>
+          <a href="artwork.html?lang=de">DE</a>
+        </nav>
+      </div>
     </header>
 
     <section class="detail" data-artwork-detail></section>

@@ -8,30 +8,47 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
+  <audio id="music1" preload="none" loop><source src="music1.wav" type="audio/wav"></audio>
+  <audio id="music2" preload="none" loop><source src="music2.wav" type="audio/wav"></audio>
+  <div class="shell">
+    <header class="site-header">
       <div class="brand"><a href="index.html">Alexey Listopad — Estate</a></div>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="#catalog">Catalog</a>
-        <a href="mailto:listopad.gallery@yahoo.com?subject=Request%20Catalogue">Request Catalogue</a>
+        <a href="gallery.html?lang=en">Selected Works</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#estate">Estate</a>
+        <a href="index.html#acquire">Acquire</a>
       </nav>
+      <div class="right-cluster">
+        <div class="sound">
+          <button onclick="toggleMusic()">⟡</button>
+          <button onclick="chooseTrack(1)">1</button>
+          <button onclick="chooseTrack(2)">2</button>
+          <span class="music-state note" data-music-state>Off</span>
+        </div>
+        <nav class="lang">
+          <a href="gallery.html?lang=en">EN</a>
+          <a href="gallery.html?lang=fr">FR</a>
+          <a href="gallery.html?lang=es">ES</a>
+          <a href="gallery.html?lang=de">DE</a>
+        </nav>
+      </div>
     </header>
 
-    <section class="detail">
+    <section class="section" style="border-top:0;padding-top:42px">
       <div class="section-head">
-        <div class="section-title">Selected Works</div>
-        <div class="section-intro">A data-driven catalog designed for gradual growth. Upload an optimized image, add one record to <span class="small">works.json</span>, and the site automatically creates the card and the artwork page.</div>
+        <div class="section-title" data-gallery-heading>Selected Works</div>
+        <div class="section-intro">A data-driven catalog designed for gradual growth. Upload an optimized image, add one record to works.json, and the site automatically creates the card and artwork page.</div>
       </div>
 
-      <div class="catalog-toolbar" id="catalog">
+      <div class="catalog-toolbar">
         <div class="filters">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="high">High Value</button>
           <button class="filter-btn" data-filter="mid">Mid Tier</button>
           <button class="filter-btn" data-filter="fast">Fast Sale</button>
         </div>
-        <div class="small">Prices available upon request</div>
+        <div class="note" data-prices-note>Prices available upon request</div>
       </div>
 
       <div class="grid" data-catalog-grid></div>
@@ -44,5 +61,26 @@
     </footer>
   </div>
   <script src="site.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const labels = {
+        heading: t('works'),
+        prices: t('pricesRequest'),
+        all: t('all'),
+        high: t('high'),
+        mid: t('mid'),
+        fast: t('fast')
+      };
+      const h = document.querySelector('[data-gallery-heading]');
+      if(h) h.textContent = labels.heading;
+      const p = document.querySelector('[data-prices-note]');
+      if(p) p.textContent = labels.prices;
+      const btns = document.querySelectorAll('[data-filter]');
+      if(btns[0]) btns[0].textContent = labels.all;
+      if(btns[1]) btns[1].textContent = labels.high;
+      if(btns[2]) btns[2].textContent = labels.mid;
+      if(btns[3]) btns[3].textContent = labels.fast;
+    });
+  </script>
 </body>
 </html>

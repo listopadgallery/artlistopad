@@ -10,7 +10,7 @@
       "tier": "high",
       "status": "available",
       "priceLabel": "Price upon request",
-      "image": "images/harbor_mist.jpg",
+      "image": "images/harbor-mist.jpg",
       "alt": "Harbor Mist by Alexey Listopad",
       "description": "A restrained coastal composition shaped by diffuse light, stillness, and tonal depth.",
       "sortOrder": 1
@@ -25,7 +25,7 @@
       "tier": "high",
       "status": "available",
       "priceLabel": "Price upon request",
-      "image": "images/silent_shore.jpg",
+      "image": "images/silent-shore.jpg",
       "alt": "Silent Shore by Alexey Listopad",
       "description": "An atmospheric shoreline work where form recedes into muted structure and Baltic light.",
       "sortOrder": 2
@@ -40,7 +40,7 @@
       "tier": "mid",
       "status": "available",
       "priceLabel": "Price upon request",
-      "image": "images/spring_labor.jpg",
+      "image": "images/spring-labor.jpg",
       "alt": "Spring Labor by Alexey Listopad",
       "description": "A more structured figurative work, balancing movement, labor, and painterly economy.",
       "sortOrder": 3
@@ -55,10 +55,40 @@
       "tier": "fast",
       "status": "available",
       "priceLabel": "Price upon request",
-      "image": "images/spring_field.jpg",
+      "image": "images/spring-field.jpg",
       "alt": "Spring Field by Alexey Listopad",
       "description": "A compact landscape with approachable scale and immediate decorative and collector appeal.",
       "sortOrder": 4
+    },
+    {
+      "id": "night-estuary",
+      "title": "Night Estuary",
+      "year": "undated",
+      "medium": "Oil on canvas",
+      "dimensions": "95 × 75 cm",
+      "signature": "Signed A.L.",
+      "tier": "high",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/night-estuary.jpg",
+      "alt": "Night Estuary by Alexey Listopad",
+      "description": "Dark water, suspended horizon, and a low-burning luminosity give the work its quiet gravity.",
+      "sortOrder": 5
+    },
+    {
+      "id": "red-house",
+      "title": "Red House",
+      "year": "undated",
+      "medium": "Oil on canvas",
+      "dimensions": "60 × 50 cm",
+      "signature": "Signed A.L.",
+      "tier": "mid",
+      "status": "available",
+      "priceLabel": "Price upon request",
+      "image": "images/red-house.jpg",
+      "alt": "Red House by Alexey Listopad",
+      "description": "A modest architectural motif rendered with tonal restraint and a strong sense of memory.",
+      "sortOrder": 6
     }
   ]
 }
