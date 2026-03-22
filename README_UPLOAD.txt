@@ -23,3 +23,7 @@ Upload these files directly into the repository root:
 - harbor-pastel.jpg
 
 If GitHub asks to replace files, confirm replacement.
+
+
+UPDATE
+- Strengthened About, Exhibitions, and Estate sections with selected biography and collections information.
