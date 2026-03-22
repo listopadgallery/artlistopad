@@ -22,6 +22,14 @@
       <div class="langs">
         <a class="" href="index.html">EN</a><a class="" href="fr.html">FR</a><a class="" href="es.html">ES</a><a class="active" href="de.html">DE</a>
       </div>
+
+      <div class="sound-controls" aria-label="Audio controls">
+        <button class="sound-toggle" type="button" aria-pressed="false">Sound: Off</button>
+        <div class="track-switch" role="group" aria-label="Track selection">
+          <button class="track-btn active" type="button" data-track="music1.mp3" aria-pressed="true">Composition I</button>
+          <button class="track-btn" type="button" data-track="music2.mp3" aria-pressed="false">Composition II</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -155,5 +163,137 @@
       <div>© Alexey Listopad Nachlass</div>
     </div>
   </footer>
+
+  <audio id="site-audio" loop preload="auto">
+    <source src="music1.mp3" type="audio/mpeg">
+  </audio>
+  
+<script>
+(function () {
+  const audio = new Audio('music1.mp3');
+  audio.loop = true;
+  audio.preload = 'auto';
+  let fadeInterval = null;
+
+  const menu = document.querySelector('.sound-menu');
+  const menuBtn = document.querySelector('.sound-menu-btn');
+  const panel = document.querySelector('.sound-menu-panel');
+  const offBtn = document.querySelector('.sound-off');
+  const trackButtons = Array.from(document.querySelectorAll('.track-btn'));
+
+  const STORAGE_SOUND = 'listopadSoundEnabled';
+  const STORAGE_TRACK = 'listopadSelectedTrack';
+
+  function clearFade() {
+    if (fadeInterval) {
+      clearInterval(fadeInterval);
+      fadeInterval = null;
+    }
+  }
+
+  function fadeTo(target, callback) {
+    clearFade();
+    fadeInterval = setInterval(() => {
+      const diff = target - audio.volume;
+      if (Math.abs(diff) < 0.03) {
+        audio.volume = target;
+        clearFade();
+        if (callback) callback();
+        return;
+      }
+      audio.volume += diff > 0 ? 0.03 : -0.03;
+      audio.volume = Math.max(0, Math.min(0.42, audio.volume));
+    }, 60);
+  }
+
+  function updateMenuButton() {
+    const isOn = !audio.paused;
+    menuBtn.setAttribute('aria-label', isOn ? menuBtn.dataset.labelOn : menuBtn.dataset.labelOff);
+  }
+
+  function updateActiveButtons(currentTrack, enabled) {
+    offBtn.classList.toggle('active', !enabled);
+    trackButtons.forEach(btn => btn.classList.toggle('active', enabled && btn.dataset.track === currentTrack));
+  }
+
+  function openMenu(force) {
+    const shouldOpen = typeof force === 'boolean' ? force : !menu.classList.contains('open');
+    menu.classList.toggle('open', shouldOpen);
+    menuBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    panel.hidden = !shouldOpen;
+  }
+
+  async function playTrack(src) {
+    localStorage.setItem(STORAGE_TRACK, src);
+    audio.src = src;
+    audio.volume = 0;
+    try {
+      await audio.play();
+      fadeTo(0.42);
+      localStorage.setItem(STORAGE_SOUND, 'true');
+      updateActiveButtons(src, true);
+      updateMenuButton();
+    } catch (e) {
+      localStorage.setItem(STORAGE_SOUND, 'false');
+      updateActiveButtons(src, false);
+      updateMenuButton();
+    }
+  }
+
+  function stopAudio() {
+    fadeTo(0, () => {
+      audio.pause();
+      updateActiveButtons(audio.src.includes('music2.mp3') ? 'music2.mp3' : 'music1.mp3', false);
+      updateMenuButton();
+    });
+    localStorage.setItem(STORAGE_SOUND, 'false');
+  }
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openMenu();
+  });
+
+  offBtn.addEventListener('click', () => {
+    stopAudio();
+    openMenu(false);
+  });
+
+  trackButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      playTrack(btn.dataset.track);
+      openMenu(false);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target)) openMenu(false);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') openMenu(false);
+  });
+
+  const savedTrack = localStorage.getItem(STORAGE_TRACK) || 'music1.mp3';
+  audio.src = savedTrack;
+  const savedEnabled = localStorage.getItem(STORAGE_SOUND) === 'true';
+  updateActiveButtons(savedTrack, savedEnabled);
+  updateMenuButton();
+
+  if (savedEnabled) {
+    audio.volume = 0.42;
+    audio.play().then(() => {
+      updateActiveButtons(savedTrack, true);
+      updateMenuButton();
+    }).catch(() => {
+      localStorage.setItem(STORAGE_SOUND, 'false');
+      updateActiveButtons(savedTrack, false);
+      updateMenuButton();
+    });
+  }
+}());
+</script>
+
+
 </body>
 </html>

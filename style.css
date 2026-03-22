@@ -255,3 +255,98 @@ img{display:block;max-width:100%}
   .section-head{display:block}
   .facts{grid-template-columns:1fr}
 }
+
+
+.sound-controls{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-left:8px;
+  flex-wrap:wrap;
+}
+.sound-toggle,
+.track-btn{
+  appearance:none;
+  border:1px solid rgba(30,26,23,.22);
+  background:rgba(255,255,255,.38);
+  color:var(--muted);
+  min-height:34px;
+  padding:8px 12px;
+  cursor:pointer;
+  font-size:.78rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.sound-toggle[aria-pressed="true"],
+.track-btn.active{
+  background:var(--ink);
+  color:#fff;
+  border-color:var(--ink);
+}
+.track-switch{
+  display:flex;
+  gap:8px;
+}
+body.sound-on .topbar{
+  box-shadow:0 8px 30px rgba(40,30,20,.08);
+}
+@media (max-width:960px){
+  .sound-controls{margin-top:12px}
+}
+
+
+/* Minimal sound menu */
+.topbar-inner{position:relative}
+.sound-menu{
+  position:relative;
+  margin-left:8px;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.sound-menu-btn{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-size:.92rem;
+  padding:0;
+  cursor:pointer;
+  letter-spacing:.01em;
+}
+.sound-menu-btn:hover,
+.sound-menu-btn[aria-expanded="true"]{color:var(--ink)}
+.sound-menu-panel{
+  position:absolute;
+  right:0;
+  top:calc(100% + 10px);
+  min-width:170px;
+  padding:14px 16px;
+  background:rgba(251,248,242,.98);
+  border:1px solid rgba(112,82,45,.14);
+  box-shadow:0 18px 40px rgba(40,30,20,.12);
+  display:none;
+}
+.sound-menu.open .sound-menu-panel{display:block}
+.sound-menu-list{
+  display:grid;
+  gap:10px;
+}
+.sound-option{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:0;
+  text-align:left;
+  color:var(--muted);
+  font-size:.9rem;
+  cursor:pointer;
+}
+.sound-option:hover,
+.sound-option.active{color:var(--ink)}
+.sound-option.active::before{
+  content:"• ";
+}
+@media (max-width: 980px){
+  .topbar-inner{flex-wrap:wrap}
+  .sound-menu{margin-left:auto}
+}
