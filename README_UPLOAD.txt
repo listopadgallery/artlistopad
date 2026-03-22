@@ -27,3 +27,15 @@ If GitHub asks to replace files, confirm replacement.
 
 UPDATE
 - Strengthened About, Exhibitions, and Estate sections with selected biography and collections information.
+
+
+LATEST SALES UPGRADE
+- corrected artist years to 1950–2025
+- removed technical/dev text from Selected Works intro
+- added stronger collector-facing scarcity language
+- upgraded biography heading and artwork pages
+
+
+COLLECTION MARKER UPGRADE
+- Marked Pink Landscape as placed in a private collection.
+- Added subtle private collection signal on the homepage.
