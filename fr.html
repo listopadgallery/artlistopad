@@ -1,279 +1,228 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alexey Listopad — Collection privée de la succession</title>
-  <meta name="description" content="Private estate website for Alexey Listopad, premium multilingual prototype.">
+  <title>Alexey Listopad — Estate</title>
+  <meta name="description" content="Estate website for the paintings of Alexey Listopad.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">Alexey Listopad<small>Collection privée de la succession</small></div>
-      <nav class="nav">
-        <a href="#home">Accueil</a>
+  <header class="site-header">
+    <div class="site-shell header-inner">
+      <a class="brand" href="#top"><strong>ALEXEY LISTOPAD</strong><span>Estate</span></a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#top">Accueil</a>
         <a href="#works">Œuvres choisies</a>
         <a href="#about">À propos</a>
         <a href="#exhibitions">Expositions</a>
-        <a href="#estate">La succession</a>
+        <a href="#estate">Estate</a>
         <a href="#acquire">Acquérir</a>
       </nav>
-      <div class="header-tools"><div class="langs">
-        <a class="" href="index.html">EN</a><a class="active" href="fr.html">FR</a><a class="" href="es.html">ES</a><a class="" href="de.html">DE</a>
-      </div>
-</div>
-        <div class="audio-inline" aria-label="Audio controls">
-          <button class="audio-icon-btn" type="button" aria-pressed="false" aria-label="Toggle sound">⟡</button>
-          <button class="audio-track-btn active" type="button" data-track="music1.mp3" aria-pressed="true">1</button>
-          <button class="audio-track-btn" type="button" data-track="music2.mp3" aria-pressed="false">2</button>
+      <div class="header-side">
+        <div class="lang-switch" aria-label="Language selector">
+          <a href="index.html" class="">EN</a>
+          <a href="fr.html" class="active">FR</a>
+          <a href="es.html" class="">ES</a>
+          <a href="de.html" class="">DE</a>
         </div>
+        <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-mark">⟡ 1 2</span><span class="sound-state">Off</span></button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
       </div>
+    </div>
+    <div class="site-shell mobile-panel">
+      <nav aria-label="Mobile">
+        <a href="#top">Accueil</a>
+        <a href="#works">Œuvres choisies</a>
+        <a href="#about">À propos</a>
+        <a href="#exhibitions">Expositions</a>
+        <a href="#estate">Estate</a>
+        <a href="#acquire">Acquérir</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language selector mobile">
+        <a href="index.html" class="">EN</a>
+        <a href="fr.html" class="active">FR</a>
+        <a href="es.html" class="">ES</a>
+        <a href="de.html" class="">DE</a>
+      </div>
+      <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-mark">⟡ 1 2</span><span class="sound-state">Off</span></button>
     </div>
   </header>
 
-  <main id="home" class="hero">
-    <div class="container hero-shell">
-      <div class="hero-copy">
-        <div class="eyebrow">Collection privée de la succession</div>
-        <h1>Alexey<br>Listopad</h1>
-        <p class="lead">Un peintre façonné par la lumière balte, la discipline académique soviétique et une pensée scénographique. Ses toiles évoluent entre atmosphère et mémoire, où port, figure et rivage deviennent des espaces de vie intérieure silencieuse.</p>
-        <div class="actions">
-          <a class="btn fill" href="#works">Voir les œuvres choisies</a>
-          <a class="btn" href="#acquire">Demander des informations</a>
+  <main id="top" class="site-shell">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Estate du peintre</div>
+          <h1>Alexey<span>Listopad</span></h1>
+          <p class="hero-lead">Un ensemble d’œuvres formé dans la lumière septentrionale de la côte baltique — des peintures façonnées par la discipline, l’atmosphère et une attention durable au silence.</p>
+          <p class="hero-note">À la suite du décès récent de l’artiste, l’estate présente une première sélection curatée issue des archives. Les œuvres sont mises en circulation progressivement, par placement privé et demande de collectionneur.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#works">Voir les œuvres choisies</a>
+            <a class="btn" href="#acquire">Demande privée</a>
+          </div>
         </div>
-        <div class="hero-note">Cette version premium adopte une palette plus muséale, un contexte biographique enrichi et une structure pensée pour les collectionneurs.</div>
+        <figure class="hero-figure">
+          <img src="harbor_mist.jpg" alt="Alexey Listopad painting">
+          <figcaption class="caption">Huile sur toile. Signé A.L. Une présentation retenue de l’estate pour collectionneurs, conseillers et institutions.</figcaption>
+        </figure>
       </div>
-      <figure class="hero-visual">
-        <img src="harbor_mist.jpg" alt="Alexey Listopad painting">
-        <div class="hero-overlay">
-          <span class="note-badge">Museum context</span>
-          <p class="caption">Les textes de musée et d’exposition décrivent ses tableaux comme des œuvres vivantes, respirantes et chatoyantes — habitées par une lumière intérieure et une présence métaphysique qui se révèle peu à peu.</p>
+    </section>
+
+    <section id="works" class="section">
+      <div class="section-head">
+        <div class="section-label">Œuvres choisies</div>
+        <div class="section-intro">
+          <h2>Une structure de fiche pensée comme en galerie</h2>
+          <p>Première sélection publique de l’estate. Chaque œuvre est présentée avec une structure disciplinée : image, titre, technique, dimensions, statut et voie de contact — suffisamment claire pour les collectionneurs, suffisamment discrète pour un contexte de galerie.</p>
         </div>
-      </figure>
-    </div>
+      </div>
+      <div class="works-grid">
+        
+        <article class="work-card">
+          <div class="work-image-wrap">
+            <img class="work-image" src="spring_labor.jpg" alt="Travail de printemps">
+          </div>
+          <div class="work-meta-top"><span>Oil on canvas</span><span>v. 1988</span><span>Signed A.L.</span></div>
+          <h3>Travail de printemps</h3>
+          <p class="work-description">Un paysage figuratif lyrique dans lequel la figure humaine est absorbée par le temps, la lumière et la terre de printemps. La peinture parle moins par le récit que par une sensation de renouveau et de suspension.</p>
+          <dl class="dl">
+            <dt>Medium</dt><dd>Oil on canvas</dd>
+            <dt>Dimensions</dt><dd>Env. 70 × 70 cm</dd>
+            <dt>Status</dt><dd>Disponible sur demande</dd>
+          </dl>
+          <div class="work-actions">
+            <a class="btn" href="#acquire">Demander des détails</a>
+          </div>
+        </article>
+    
+        
+        <article class="work-card">
+          <div class="work-image-wrap">
+            <img class="work-image" src="harbor_mist.jpg" alt="Port à l’aube">
+          </div>
+          <div class="work-meta-top"><span>Oil on canvas</span><span>v. 1991</span><span>Signed A.L.</span></div>
+          <h3>Port à l’aube</h3>
+          <p class="work-description">Une composition maritime atmosphérique caractéristique du vocabulaire balte de Listopad. L’architecture portuaire et les petites embarcations apparaissent comme des formes-mémoire dissoutes dans l’air lumineux.</p>
+          <dl class="dl">
+            <dt>Medium</dt><dd>Oil on canvas</dd>
+            <dt>Dimensions</dt><dd>Env. 80 × 60 cm</dd>
+            <dt>Status</dt><dd>Disponible sur demande</dd>
+          </dl>
+          <div class="work-actions">
+            <a class="btn" href="#acquire">Demander des détails</a>
+          </div>
+        </article>
+    
+        
+        <article class="work-card">
+          <div class="work-image-wrap">
+            <img class="work-image" src="silent_shore.jpg" alt="Rivage silencieux">
+          </div>
+          <div class="work-meta-top"><span>Oil on canvas</span><span>v. 1994</span><span>Signed A.L.</span></div>
+          <h3>Rivage silencieux</h3>
+          <p class="work-description">Un paysage marin contemplatif où les figures sont réduites à une présence plutôt qu’à une anecdote. La retenue tonale et une lumière argentée-violette donnent à l’œuvre une gravité méditative.</p>
+          <dl class="dl">
+            <dt>Medium</dt><dd>Oil on canvas</dd>
+            <dt>Dimensions</dt><dd>Env. 90 × 70 cm</dd>
+            <dt>Status</dt><dd>Disponible sur demande</dd>
+          </dl>
+          <div class="work-actions">
+            <a class="btn" href="#acquire">Demander des détails</a>
+          </div>
+        </article>
+    
+      </div>
+      <a class="minor-link" href="#acquire">D’autres œuvres de l’estate sont disponibles sur demande.</a>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <div class="section-label">À propos</div>
+        <div class="section-intro"><h2>Un peintre entre discipline, atmosphère et mémoire</h2></div>
+      </div>
+      <div class="two-col">
+        <div class="copy-block">
+          <p>Alexey Listopad (1950–2024) a développé un langage pictural façonné par la lumière baltique, la structure académique et une intelligence scénographique discrète. Né dans le nord et formé à Klaipėda, il a conservé une sensibilité aux rivages, aux lisières industrielles et à la retenue tonale.</p>
+          <p>Parallèlement à la peinture, il a travaillé dans des environnements cinématographiques et scénographiques. Cette expérience a nourri l’intelligence spatiale des toiles tardives : composées plutôt qu’accidentelles, lumineuses plutôt que décoratives, intérieures plutôt que descriptives.</p>
+        </div>
+        <aside class="quote-card">
+          <blockquote>Les peintures n’insistent pas ; elles se dévoilent lentement. Leur atmosphère demeure en suspension, comme si la mémoire elle-même cherchait encore sa lumière.</blockquote>
+          <p class="quote-source">Déclaration de l’estate</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="exhibitions" class="section">
+      <div class="section-head">
+        <div class="section-label">Expositions</div>
+        <div class="section-intro">
+          <h2>Le cadrage institutionnel compte</h2>
+          <p>Un site d’estate premium ne doit pas ressembler à une marketplace. La section expositions ancre l’œuvre dans un contexte public et renforce la confiance des collectionneurs par un ton muséal.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <dl class="info-list">
+          <dt>Contexte muséal</dt><dd>Exposition rétrospective au Musée de Dolgoprudny.</dd>
+          <dt>Modèle de diffusion</dt><dd>Mise en circulation contrôlée depuis des archives privées.</dd>
+          <dt>Technique</dt><dd>Huile sur toile ; signé A.L.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="estate" class="section">
+      <div class="section-head">
+        <div class="section-label">Estate</div>
+        <div class="section-intro"><h2>Une archive contrôlée, non un inventaire ouvert</h2></div>
+      </div>
+      <div class="two-col">
+        <div class="copy-block">
+          <p>L’estate a été constitué pour préserver, documenter et présenter progressivement l’œuvre après le décès de l’artiste. Les archives comprennent environ 300 peintures couvrant plusieurs décennies de pratique.</p>
+          <p>Des œuvres choisies sont présentées publiquement. Un ensemble plus large reste accessible sur demande pour collectionneurs, conseillers et institutions. Cette approche maintient une hiérarchie, évite la surabondance et soutient un positionnement collector-grade.</p>
+        </div>
+        <div class="info-card">
+          <img src="spring_field.jpg" alt="Estate archive painting view" style="border-radius:18px; aspect-ratio:4/4.5; object-fit:cover; width:100%; margin-bottom:14px;">
+          <p>The visual rhythm remains quiet, but the sales structure becomes more disciplined: curated release, private inquiry, controlled inventory.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="acquire" class="section">
+      <div class="section-head">
+        <div class="section-label">Acquérir</div>
+        <div class="section-intro">
+          <h2>Acquisition uniquement par demande privée</h2>
+          <p>Les œuvres sont proposées par contact direct. Les informations concernant disponibilité, prix, état, provenance et expédition en Europe sont communiquées individuellement.</p>
+        </div>
+      </div>
+      <div class="acquire-grid">
+        <div class="acquire-card">
+          <strong>Contact</strong>
+          <a class="email-link" href="mailto:estate@listopad.gallery">estate@listopad.gallery</a>
+          <p>Remplacez cet email si vous souhaitez un autre contact avant l’envoi sur GitHub.</p>
+        </div>
+        <div class="info-card">
+          <dl class="info-list">
+            <dt>Format</dt><dd>Private inquiry</dd>
+            <dt>Shipping</dt><dd>Europe on request</dd>
+            <dt>Documents</dt><dd>Condition notes and additional images available</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section id="works" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="kicker-line">Collection privée de la succession</div>
-          <h2 class="section-title">Œuvres choisies</h2>
-        </div>
-        <div class="section-note">Trois peintures représentatives présentées ici comme prototype premium. Les titres, dates et prix restent provisoires tant que l’archive complète n’est pas cataloguée.</div>
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <div>Collection privée — Estate</div>
+      <div class="footer-links">
+        <a href="#works">Œuvres choisies</a>
+        <a href="#estate">Estate</a>
+        <a href="#acquire">Acquérir</a>
       </div>
-      <div class="grid-3">
-        <article class="card">
-              <img src="spring_labor.jpg" alt="Travail de printemps">
-              <div class="card-body">
-                <div class="meta">Huile sur toile · v. 1988</div>
-                <h3>Travail de printemps</h3>
-                <p>Une composition lyrique où la figure et le paysage se fondent dans un champ d’air coloré. L’œuvre parle moins par le récit que par une sensation de renouveau et d’immobilité suspendue.</p>
-                <div class="price">Fourchette provisoire : 2 200 € – 3 200 €</div>
-              </div>
-            </article><article class="card">
-              <img src="harbor_mist.jpg" alt="Port à l’aube">
-              <div class="card-body">
-                <div class="meta">Huile sur toile · v. 1991</div>
-                <h3>Port à l’aube</h3>
-                <p>Une composition maritime atmosphérique caractéristique du vocabulaire balte de Listopad. L’architecture du port et les petites embarcations apparaissent comme des formes de mémoire dissoutes dans un air lumineux.</p>
-                <div class="price">Fourchette provisoire : 2 400 € – 3 600 €</div>
-              </div>
-            </article><article class="card">
-              <img src="silent_shore.jpg" alt="Rivage silencieux">
-              <div class="card-body">
-                <div class="meta">Huile sur toile · v. 1994</div>
-                <h3>Rivage silencieux</h3>
-                <p>Un paysage marin contemplatif où les figures relèvent davantage de la présence que de l’anecdote. La retenue tonale et la lumière argentée violacée donnent à l’œuvre une gravité méditative.</p>
-                <div class="price">Fourchette provisoire : 2 800 € – 4 200 €</div>
-              </div>
-            </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container split">
-      <div class="panel">
-        <div class="kicker-line">Collection privée de la succession</div>
-        <h2 class="section-title">À propos de l’artiste</h2>
-        <p class="big">Alexey Evgenievich Listopad (1950–2025) est né à Nyandoma, dans la région d’Arkhangelsk, et a passé son enfance et sa jeunesse à Klaipėda, sur la mer Baltique, où il a également terminé l’école d’art. De 1970 à 1974, il étudie à l’École d’art de Penza K. A. Savitsky. Entre 1975 et 1979, il enseigne à Klaipėda et participe aux expositions de la RSS de Lituanie.</p>
-        <p>Installé à Moscou en 1980, il rejoint en 1981 l’association des jeunes du Syndicat des artistes de Moscou et travaille comme chef décorateur pour le cinéma de 1989 à 1994. En 2004, il s’installe à Dolgoproudny ; depuis 2005 il est membre de l’Union des artistes de Russie. Son langage mûr réunit peinture figurative et paysage avec une structure théâtrale, une nuance tonale et une atmosphère intérieure.</p>
-        <div class="quote">« Les toiles vivent, respirent et scintillent ; elles contiennent toujours un certain mystère et une attente — image de la multidimensionnalité du monde. Les œuvres sont spiritualisées, remplies de lumière intérieure et d’énergie. Elles sont métaphysiques et ne se révèlent pas immédiatement. »<small>Musée historique et artistique de Dolgoproudny, annonce de l’exposition personnelle “Mirages du monde”, 2021</small></div>
-      </div>
-      <div class="panel">
-        <img src="spring_labor.jpg" alt="Alexey Listopad painting">
-      </div>
-    </div>
-  </section>
-
-  <section id="exhibitions" class="section">
-    <div class="container split">
-      <div class="panel">
-        <div class="kicker-line">Collection privée de la succession</div>
-        <h2 class="section-title">Expositions & collections</h2>
-        <p class="tagline">Un profil institutionnel synthétique tiré de la page du musée de Dolgoproudny et utilisé ici pour renforcer la confiance des collectionneurs.</p>
-        <div class="facts"><div class="fact"><strong>Collections</strong>Les œuvres sont conservées dans des musées publics et des collections privées en Russie, Lituanie, Pologne, France, Allemagne, États-Unis, Angleterre, Chine et Australie.</div><div class="fact"><strong>Médium</strong>La majorité des œuvres est réalisée en peinture à l’huile et techniques mixtes ; le cœur de l’offre de la succession est principalement constitué d’huiles sur toile.</div><div class="fact"><strong>Orientation</strong>L’artiste privilégie la peinture figurative et le paysage, en particulier les motifs baltes et maritimes.</div><div class="fact"><strong>Présence institutionnelle</strong>L’artiste a exposé à Moscou, Saint-Pétersbourg, Dolgoproudny, Klaipėda et Nida, dans des expositions collectives et personnelles.</div></div>
-      </div>
-      <div class="panel">
-        <h3 style="margin-top:0;font-weight:normal;font-size:1.2rem">Repères d’exposition</h3>
-        <ul class="timeline">
-          <li><span class="year">1988</span> — Exposition de la jeunesse de toute l’Union, Manège, Moscou.</li><li><span class="year">1990</span> — Exposition personnelle à la Maison du Cinéma, Moscou (esquisses et peintures pour le film “Sphinx”).</li><li><span class="year">1992</span> — Exposition personnelle à la Maison du Cinéma, Moscou (pour le film “Présence”).</li><li><span class="year">2003–2007</span> — Expositions à la Maison centrale des artistes et dans des galeries associées à Moscou.</li><li><span class="year">2007</span> — Exposition personnelle au musée historique et artistique de Dolgoproudny.</li><li><span class="year">2010</span> — Exposition personnelle à Nida, Lituanie ; exposition anniversaire avec l’Union des artistes de Russie.</li><li><span class="year">2015</span> — Exposition personnelle à l’Union des artistes de Russie.</li><li><span class="year">2017</span> — Exposition personnelle “Sous le ciel bleu”, musée de Dolgoproudny.</li><li><span class="year">2020</span> — Exposition personnelle “Thèmes éternels”, musée de Dolgoproudny.</li><li><span class="year">2021</span> — Exposition personnelle “Mirages du monde”, musée de Dolgoproudny.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="estate" class="section">
-    <div class="container split">
-      <div class="panel">
-        <div class="kicker-line">Collection privée de la succession</div>
-        <h2 class="section-title">La succession</h2>
-        <p>Après le décès de l’artiste, la succession présente un ensemble sélectionné de peintures signées avec l’objectif de construire un marché stable à long terme, plutôt que d’encourager une dispersion rapide. La combinaison d’une histoire d’expositions institutionnelles, de collections privées internationales et d’un langage visuel cohérent centré sur la Baltique donne à l’archive un fort potentiel de placement réfléchi en Europe.</p>
-      </div>
-      <div class="panel">
-        <ul class="list">
-          <li>Œuvres signées provenant de la succession de l’artiste</li><li>Huiles sur toile et techniques mixtes sélectionnées</li><li>Historique d’expositions institutionnelles et contexte de catalogue</li><li>Motifs baltes, figuratifs et maritimes</li><li>Convient aux collectionneurs privés, aux décorateurs et à un futur placement en galerie</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="acquire" class="section">
-    <div class="container">
-      <div class="panel acquire">
-        <div>
-          <div class="kicker-line">Collection privée de la succession</div>
-          <h2 class="section-title">Acquérir</h2>
-          <p>Pour toute demande d’acquisition, de provenance, de transport, de réservation ou de photographies d’état, les collectionneurs peuvent contacter directement la succession. À mesure que l’archive sera cataloguée, cette structure pourra évoluer vers un site complet multilingue avec filtres, fiches d’œuvres et formulaires de demande.</p>
-        </div>
-        <div>
-          <a class="btn fill" href="mailto:hello@example.com">Demander des informations</a>
-          <div style="margin-top:14px;color:var(--muted);font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:.92rem">Remplacer par votre e-mail · WhatsApp · contact galerie</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer-line">
-      <div>Base premium préparée pour évoluer vers un site complet multilingue de succession d’artiste.</div>
-      <div>© Succession Alexey Listopad</div>
     </div>
   </footer>
 
-  <audio id="site-audio" loop preload="auto">
-    <source src="music1.mp3" type="audio/mpeg">
-  </audio>
-  
-
-<script>
-(function () {
-  const audio = new Audio('music1.mp3');
-  audio.loop = true;
-  audio.preload = 'auto';
-  let fadeInterval = null;
-
-  const toggle = document.querySelector('.audio-icon-btn');
-  const trackButtons = Array.from(document.querySelectorAll('.audio-track-btn'));
-
-  const STORAGE_SOUND = 'listopadSoundEnabled';
-  const STORAGE_TRACK = 'listopadSelectedTrack';
-
-  function clearFade() {
-    if (fadeInterval) {
-      clearInterval(fadeInterval);
-      fadeInterval = null;
-    }
-  }
-
-  function fadeTo(target, callback) {
-    clearFade();
-    fadeInterval = setInterval(() => {
-      const diff = target - audio.volume;
-      if (Math.abs(diff) < 0.03) {
-        audio.volume = target;
-        clearFade();
-        if (callback) callback();
-        return;
-      }
-      audio.volume += diff > 0 ? 0.03 : -0.03;
-      audio.volume = Math.max(0, Math.min(0.35, audio.volume));
-    }, 60);
-  }
-
-  function currentTrack() {
-    return audio.src.includes('music2.mp3') ? 'music2.mp3' : 'music1.mp3';
-  }
-
-  function updateUI(enabled, track) {
-    toggle.classList.toggle('active', enabled);
-    toggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-    toggle.textContent = '⟡';
-    trackButtons.forEach(btn => {
-      const active = btn.dataset.track === track;
-      btn.classList.toggle('active', active);
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
-  }
-
-  async function playTrack(src) {
-    localStorage.setItem(STORAGE_TRACK, src);
-    audio.src = src;
-    audio.volume = 0;
-    try {
-      await audio.play();
-      fadeTo(0.35);
-      localStorage.setItem(STORAGE_SOUND, 'true');
-      updateUI(true, src);
-    } catch (e) {
-      localStorage.setItem(STORAGE_SOUND, 'false');
-      updateUI(false, src);
-    }
-  }
-
-  function stopAudio() {
-    localStorage.setItem(STORAGE_SOUND, 'false');
-    fadeTo(0, () => {
-      audio.pause();
-      updateUI(false, currentTrack());
-    });
-  }
-
-  toggle.addEventListener('click', async () => {
-    const track = localStorage.getItem(STORAGE_TRACK) || currentTrack();
-    if (audio.paused) {
-      playTrack(track);
-    } else {
-      stopAudio();
-    }
-  });
-
-  trackButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      playTrack(btn.dataset.track);
-    });
-  });
-
-  const savedTrack = localStorage.getItem(STORAGE_TRACK) || 'music1.mp3';
-  audio.src = savedTrack;
-  const savedEnabled = localStorage.getItem(STORAGE_SOUND) === 'true';
-  updateUI(savedEnabled, savedTrack);
-
-  if (savedEnabled) {
-    audio.volume = 0.35;
-    audio.play().then(() => {
-      updateUI(true, savedTrack);
-    }).catch(() => {
-      localStorage.setItem(STORAGE_SOUND, 'false');
-      updateUI(false, savedTrack);
-    });
-  }
-}());
-</script>
-
-
-
+  <script src="site.js"></script>
 </body>
 </html>
