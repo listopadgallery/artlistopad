@@ -1,41 +1,15 @@
-SUPER SIMPLE VERSION
+MULTILANGUAGE FIX
 
-This version has:
-- NO works.json
-- NO images folder
-- only root files
+This version fixes Selected Works translation and behavior.
 
-Upload these files directly into the repository root:
-- index.html
-- fr.html
-- es.html
-- de.html
-- gallery.html
-- pink-landscape.html
-- grey-sea.html
-- harbor-pastel.html
-- style.css
-- site.js
-- music1.wav
-- music2.wav
-- pink-landscape.jpg
-- grey-sea.jpg
-- harbor-pastel.jpg
+Included:
+- home pages: index.html, ru.html, fr.html, es.html, de.html
+- gallery pages: gallery.html, gallery-ru.html, gallery-fr.html, gallery-es.html, gallery-de.html
+- artwork pages for each language
 
-If GitHub asks to replace files, confirm replacement.
+Upload ALL files from this ZIP into the repository root and replace old ones.
 
 
-UPDATE
-- Strengthened About, Exhibitions, and Estate sections with selected biography and collections information.
-
-
-LATEST SALES UPGRADE
-- corrected artist years to 1950–2025
-- removed technical/dev text from Selected Works intro
-- added stronger collector-facing scarcity language
-- upgraded biography heading and artwork pages
-
-
-COLLECTION MARKER UPGRADE
-- Marked Pink Landscape as placed in a private collection.
-- Added subtle private collection signal on the homepage.
+LATEST UPDATE
+- Gallery page titles translated on RU/FR/ES/DE pages.
+- Individual artwork pages translated for RU/FR/ES/DE, including titles, descriptions, and notes.
