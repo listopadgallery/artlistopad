@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Алексей Листопад — Наследие</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<audio id="music1" preload="none" loop><source src="music1.wav" type="audio/wav"></audio>
+<audio id="music2" preload="none" loop><source src="music2.wav" type="audio/wav"></audio>
+<div class="shell">
+<header class="site-header">
+  <div class="brand">Alexey Listopad — Estate</div>
+  <nav class="nav">
+    <a href="gallery.html">Selected Works</a>
+    <a href="#about">О художнике</a>
+    <a href="#exhibitions">Выставки</a>
+    <a href="#estate">Наследие</a>
+    <a href="#acquire">Приобретение</a>
+  </nav>
+  <div class="right-cluster">
+    <div class="sound">
+      <button onclick="toggleMusic()">⟡</button>
+      <button onclick="chooseTrack(1)">1</button>
+      <button onclick="chooseTrack(2)">2</button>
+      <span class="music-state note" data-music-state>Off</span>
+    </div>
+    <nav class="lang">
+      <a href="index.html">EN</a>
+      <a href="ru.html">RU</a>
+      <a href="fr.html">FR</a>
+      <a href="es.html">ES</a>
+      <a href="de.html">DE</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Частное собрание наследия</div>
+    <h1>Алексей<br>Листопад</h1>
+    <p>Данный сайт представляет частное собрание наследия художника. Ограниченный выбор произведений доступен для приобретения по индивидуальному запросу.</p>
+    <p class="soft">Работы находятся в музейных и частных коллекциях в Европе, США и Азии.</p>
+  </div>
+  <div class="hero-image">
+    <img src="pink-landscape.jpg">
+  </div>
+</section>
+
+<section class="section" id="about">
+<div class="section-head">
+<div class="section-title">О художнике</div>
+<div class="section-intro">Алексей Листопад (1950–2025) — художник, сценограф и художник кино.</div>
+</div>
+<div class="columns">
+<div class="copy">
+Обучался в Пензенском художественном училище им. К.А. Савицкого. Работал в Клайпеде и Москве, формируя живописный язык, основанный на атмосфере, структуре и повествовательности.
+</div>
+<div class="panel">
+<h3>Биография</h3>
+<div class="meta">
+1950 — Архангельская область<br>
+1970–1974 — Пензенское училище<br>
+1980 — Москва<br>
+1989–1994 — работа в кино<br>
+2005 — Союз художников России
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="estate">
+<div class="section-head">
+<div class="section-title">Наследие</div>
+<div class="section-intro">Работы предлагаются из частного собрания.</div>
+</div>
+<div class="columns">
+<div class="copy">
+Представлена лишь часть архива. Дополнительные произведения доступны по индивидуальному запросу.
+</div>
+<div class="panel">
+<ul>
+<li>Ограниченный выбор произведений</li>
+<li>Цены по запросу</li>
+<li>Работы размещены в частных коллекциях</li>
+</ul>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div>Alexey Listopad Estate</div>
+<div>© <span data-year></span></div>
+</footer>
+
+</div>
+<script src="site.js"></script>
+</body></html>
