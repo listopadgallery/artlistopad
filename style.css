@@ -451,3 +451,84 @@ body.sound-on .topbar{
     padding:9px 10px;
   }
 }
+
+
+/* Ultra-compact audio controls */
+.header-tools{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  justify-self:end;
+}
+.langs{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.audio-inline{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color:var(--muted);
+}
+.audio-icon-btn,
+.audio-track-btn{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:0;
+  margin:0;
+  color:var(--muted);
+  font-size:.78rem;
+  line-height:1;
+  cursor:pointer;
+}
+.audio-icon-btn{
+  font-size:.82rem;
+  transform:translateY(-1px);
+}
+.audio-icon-btn:hover,
+.audio-track-btn:hover,
+.audio-track-btn.active,
+.audio-icon-btn.active{
+  color:var(--ink);
+}
+.audio-track-btn.active{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+@media (max-width: 640px){
+  .header-tools{gap:7px}
+  .langs{gap:7px}
+  .audio-inline{gap:7px}
+  .audio-icon-btn,.audio-track-btn{font-size:.74rem}
+  .audio-icon-btn{font-size:.78rem}
+}
+
+.sound-menu{display:none !important}
+
+
+/* Ultra subtle gallery-style audio */
+.audio-icon-btn{
+  font-size:.7rem;
+  opacity:.6;
+}
+.audio-icon-btn:hover,
+.audio-icon-btn.active{
+  opacity:.95;
+}
+
+.audio-track-btn{
+  font-size:.7rem;
+  opacity:.6;
+}
+.audio-track-btn.active{
+  opacity:.95;
+  text-decoration:none;
+  border-bottom:1px solid var(--ink);
+}
+
+.audio-inline{
+  gap:6px;
+}

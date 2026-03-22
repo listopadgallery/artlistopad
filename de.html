@@ -169,6 +169,7 @@
     <source src="music1.mp3" type="audio/mpeg">
   </audio>
   
+
 <script>
 (function () {
   const audio = new Audio('music1.mp3');
@@ -176,11 +177,8 @@
   audio.preload = 'auto';
   let fadeInterval = null;
 
-  const menu = document.querySelector('.sound-menu');
-  const menuBtn = document.querySelector('.sound-menu-btn');
-  const panel = document.querySelector('.sound-menu-panel');
-  const offBtn = document.querySelector('.sound-off');
-  const trackButtons = Array.from(document.querySelectorAll('.track-btn'));
+  const toggle = document.querySelector('.audio-icon-btn');
+  const trackButtons = Array.from(document.querySelectorAll('.audio-track-btn'));
 
   const STORAGE_SOUND = 'listopadSoundEnabled';
   const STORAGE_TRACK = 'listopadSelectedTrack';
@@ -203,25 +201,23 @@
         return;
       }
       audio.volume += diff > 0 ? 0.03 : -0.03;
-      audio.volume = Math.max(0, Math.min(0.42, audio.volume));
+      audio.volume = Math.max(0, Math.min(0.35, audio.volume));
     }, 60);
   }
 
-  function updateMenuButton() {
-    const isOn = !audio.paused;
-    menuBtn.setAttribute('aria-label', isOn ? menuBtn.dataset.labelOn : menuBtn.dataset.labelOff);
+  function currentTrack() {
+    return audio.src.includes('music2.mp3') ? 'music2.mp3' : 'music1.mp3';
   }
 
-  function updateActiveButtons(currentTrack, enabled) {
-    offBtn.classList.toggle('active', !enabled);
-    trackButtons.forEach(btn => btn.classList.toggle('active', enabled && btn.dataset.track === currentTrack));
-  }
-
-  function openMenu(force) {
-    const shouldOpen = typeof force === 'boolean' ? force : !menu.classList.contains('open');
-    menu.classList.toggle('open', shouldOpen);
-    menuBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
-    panel.hidden = !shouldOpen;
+  function updateUI(enabled, track) {
+    toggle.classList.toggle('active', enabled);
+    toggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+    toggle.textContent = enabled ? '⟡' : '⟡';
+    trackButtons.forEach(btn => {
+      const active = btn.dataset.track === track;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
   }
 
   async function playTrack(src) {
@@ -230,66 +226,50 @@
     audio.volume = 0;
     try {
       await audio.play();
-      fadeTo(0.42);
+      fadeTo(0.35);
       localStorage.setItem(STORAGE_SOUND, 'true');
-      updateActiveButtons(src, true);
-      updateMenuButton();
+      updateUI(true, src);
     } catch (e) {
       localStorage.setItem(STORAGE_SOUND, 'false');
-      updateActiveButtons(src, false);
-      updateMenuButton();
+      updateUI(false, src);
     }
   }
 
   function stopAudio() {
+    localStorage.setItem(STORAGE_SOUND, 'false');
     fadeTo(0, () => {
       audio.pause();
-      updateActiveButtons(audio.src.includes('music2.mp3') ? 'music2.mp3' : 'music1.mp3', false);
-      updateMenuButton();
+      updateUI(false, currentTrack());
     });
-    localStorage.setItem(STORAGE_SOUND, 'false');
   }
 
-  menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    openMenu();
-  });
-
-  offBtn.addEventListener('click', () => {
-    stopAudio();
-    openMenu(false);
+  toggle.addEventListener('click', async () => {
+    const track = localStorage.getItem(STORAGE_TRACK) || currentTrack();
+    if (audio.paused) {
+      playTrack(track);
+    } else {
+      stopAudio();
+    }
   });
 
   trackButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       playTrack(btn.dataset.track);
-      openMenu(false);
     });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target)) openMenu(false);
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') openMenu(false);
   });
 
   const savedTrack = localStorage.getItem(STORAGE_TRACK) || 'music1.mp3';
   audio.src = savedTrack;
   const savedEnabled = localStorage.getItem(STORAGE_SOUND) === 'true';
-  updateActiveButtons(savedTrack, savedEnabled);
-  updateMenuButton();
+  updateUI(savedEnabled, savedTrack);
 
   if (savedEnabled) {
-    audio.volume = 0.42;
+    audio.volume = 0.35;
     audio.play().then(() => {
-      updateActiveButtons(savedTrack, true);
-      updateMenuButton();
+      updateUI(true, savedTrack);
     }).catch(() => {
       localStorage.setItem(STORAGE_SOUND, 'false');
-      updateActiveButtons(savedTrack, false);
-      updateMenuButton();
+      updateUI(false, savedTrack);
     });
   }
 }());
