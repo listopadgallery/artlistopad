@@ -22,14 +22,12 @@
       <div class="header-tools"><div class="langs">
         <a class="" href="index.html">EN</a><a class="active" href="fr.html">FR</a><a class="" href="es.html">ES</a><a class="" href="de.html">DE</a>
       </div>
-
-      <div class="sound-controls" aria-label="Audio controls">
-        <button class="sound-toggle" type="button" aria-pressed="false">Sound: Off</button>
-        <div class="track-switch" role="group" aria-label="Track selection">
-          <button class="track-btn active" type="button" data-track="music1.mp3" aria-pressed="true">Composition I</button>
-          <button class="track-btn" type="button" data-track="music2.mp3" aria-pressed="false">Composition II</button>
+</div>
+        <div class="audio-inline" aria-label="Audio controls">
+          <button class="audio-icon-btn" type="button" aria-pressed="false" aria-label="Toggle sound">⟡</button>
+          <button class="audio-track-btn active" type="button" data-track="music1.mp3" aria-pressed="true">1</button>
+          <button class="audio-track-btn" type="button" data-track="music2.mp3" aria-pressed="false">2</button>
         </div>
-      </div>
       </div>
     </div>
   </header>
@@ -212,7 +210,7 @@
   function updateUI(enabled, track) {
     toggle.classList.toggle('active', enabled);
     toggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-    toggle.textContent = enabled ? '⟡' : '⟡';
+    toggle.textContent = '⟡';
     trackButtons.forEach(btn => {
       const active = btn.dataset.track === track;
       btn.classList.toggle('active', active);
@@ -274,6 +272,7 @@
   }
 }());
 </script>
+
 
 
 </body>
